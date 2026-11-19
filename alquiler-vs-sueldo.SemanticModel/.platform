@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "alquiler-vs-sueldo"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f45fbca8-fe83-49ef-904b-2b0839cd972f"
+  }
+}

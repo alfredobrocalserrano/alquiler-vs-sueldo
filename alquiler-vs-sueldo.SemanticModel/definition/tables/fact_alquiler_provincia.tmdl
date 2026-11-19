@@ -1,0 +1,78 @@
+table fact_alquiler_provincia
+	lineageTag: f10a1cb1-dc90-45bc-ae0a-a339fccf041b
+
+	column cod_prov
+		dataType: string
+		isHidden
+		lineageTag: c70db2c5-4f93-41cc-8e6e-c3354eab75ae
+		summarizeBy: none
+		sourceColumn: cod_prov
+
+		annotation SummarizationSetBy = User
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 18c2aad9-4010-4e41-835a-373ceacffe72
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = User
+
+	column viv_arrendadas
+		dataType: int64
+		formatString: #,0
+		lineageTag: 897b99c3-59c7-449b-8ec7-5f7bcadbdb4d
+		summarizeBy: none
+		sourceColumn: viv_arrendadas
+
+		annotation SummarizationSetBy = User
+
+	column alquiler_medio
+		dataType: int64
+		formatString: #,0 €
+		lineageTag: d76fb650-d7bb-4227-9739-25a64b656e43
+		summarizeBy: none
+		sourceColumn: alquiler_medio
+
+		annotation SummarizationSetBy = User
+
+	column alquiler_nuevos
+		dataType: int64
+		formatString: #,0 €
+		lineageTag: a29856dc-c4f3-47da-b6d1-88ced4f352a0
+		summarizeBy: none
+		sourceColumn: alquiler_nuevos
+
+		annotation SummarizationSetBy = User
+
+	column alquiler_m2
+		dataType: double
+		formatString: #,0.0 €
+		lineageTag: cea9f109-7d7c-4950-9bb2-c7c772d0ea19
+		summarizeBy: none
+		sourceColumn: alquiler_m2
+
+		annotation SummarizationSetBy = User
+
+	column m2_medios
+		dataType: int64
+		lineageTag: d20a0eb7-4440-4e7d-9b87-a9a19fb131d0
+		summarizeBy: none
+		sourceColumn: m2_medios
+
+		annotation SummarizationSetBy = User
+
+	partition fact_alquiler_provincia = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaDatos & "fact_alquiler_provincia.csv"),[Delimiter=",", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"cod_prov", type text}, {"anio", Int64.Type}, {"viv_arrendadas", Int64.Type}, {"alquiler_medio", Int64.Type}, {"alquiler_nuevos", Int64.Type}, {"alquiler_m2", type number}, {"m2_medios", Int64.Type}}, "en-US")
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table
+

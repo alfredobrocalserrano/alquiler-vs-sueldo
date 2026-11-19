@@ -1,0 +1,41 @@
+table dim_tramo_edad
+	lineageTag: dba4a06d-0da0-466e-ba4d-7238dcef429b
+
+	column tramo_edad
+		dataType: string
+		lineageTag: 0594d18c-fcfd-4e41-aec9-395b4f5f2387
+		summarizeBy: none
+		sourceColumn: tramo_edad
+
+		annotation SummarizationSetBy = User
+
+	column orden
+		dataType: int64
+		isHidden
+		lineageTag: d2b97726-4961-4ff8-a8ab-5a924f553f01
+		summarizeBy: none
+		sourceColumn: orden
+
+		annotation SummarizationSetBy = User
+
+	column etiqueta
+		dataType: string
+		lineageTag: d8d67d6c-15c6-45c7-966e-09f91173c9eb
+		summarizeBy: none
+		sourceColumn: etiqueta
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = User
+
+	partition dim_tramo_edad = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaDatos & "dim_tramo_edad.csv"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"tramo_edad", type text}, {"orden", Int64.Type}, {"etiqueta", type text}}, "en-US")
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table
+

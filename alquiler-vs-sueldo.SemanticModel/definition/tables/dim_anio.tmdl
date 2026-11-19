@@ -1,0 +1,24 @@
+table dim_anio
+	lineageTag: 0ee07eb7-d27c-4ed0-b03e-3380eba8ebde
+
+	column anio
+		dataType: int64
+		formatString: 0
+		lineageTag: 72f654b0-3481-4837-bf52-03c48d98838a
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = User
+
+	partition dim_anio = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaDatos & "dim_anio.csv"),[Delimiter=",", Columns=1, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"anio", Int64.Type}}, "en-US")
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table
+

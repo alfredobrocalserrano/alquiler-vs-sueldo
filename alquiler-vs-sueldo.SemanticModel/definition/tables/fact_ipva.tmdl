@@ -1,0 +1,43 @@
+table fact_ipva
+	lineageTag: 453441c7-98ca-4096-9559-d683f817b237
+
+	column cod_prov
+		dataType: string
+		isHidden
+		lineageTag: d5062e99-50a1-4f7f-a8eb-b7e8a6c48f70
+		summarizeBy: none
+		sourceColumn: cod_prov
+
+		annotation SummarizationSetBy = User
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 17d1d6dd-38fe-44d4-b6d9-430baaf34b87
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = User
+
+	column indice_alquiler
+		dataType: double
+		formatString: 0.0
+		lineageTag: 7a05e2d6-97ed-4828-94a6-3486a46a6187
+		summarizeBy: none
+		sourceColumn: indice_alquiler
+
+		annotation SummarizationSetBy = User
+
+	partition fact_ipva = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaDatos & "fact_ipva.csv"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"cod_prov", type text}, {"anio", Int64.Type}, {"indice_alquiler", type number}}, "en-US")
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,408 @@
+04003;Adra;Almería;301;369;4,3;94
+04013;Almería;Almería;8.563;572;7,1;86
+04053;Huércal-Overa;Almería;706;388;4,3;100
+04066;Níjar;Almería;496;434;4,6;110
+04079;Roquetas de Mar;Almería;5.518;479;6,4;81
+04100;Vera;Almería;1.053;470;6,3;83
+04102;Vícar;Almería;850;396;5,5;80
+04902;Ejido, El;Almería;2.424;425;5,4;87
+11004;Algeciras;Cádiz;3.511;541;7,2;82
+11006;Arcos de la Frontera;Cádiz;420;373;4,4;92
+11007;Barbate;Cádiz;186;569;7,1;90
+11008;Barrios, Los;Cádiz;491;546;6,1;98
+11012;Cádiz;Cádiz;5.321;711;9,5;87
+11014;Conil de la Frontera;Cádiz;430;628;7,4;97
+11015;Chiclana de la Frontera;Cádiz;1.867;551;6,9;90
+11016;Chipiona;Cádiz;467;826;8,6;101
+11020;Jerez de la Frontera;Cádiz;6.036;573;6,8;92
+11022;Línea de la Concepción, La;Cádiz;1.359;665;8,2;90
+11027;Puerto de Santa María, El;Cádiz;4.048;810;8,5;101
+11028;Puerto Real;Cádiz;1.100;557;6,8;89
+11030;Rota;Cádiz;2.587;978;10,5;98
+11031;San Fernando;Cádiz;3.363;524;6,9;84
+11032;Sanlúcar de Barrameda;Cádiz;1.225;608;6,9;96
+11033;San Roque;Cádiz;800;971;8,2;116
+14021;Córdoba;Córdoba;13.365;588;7,4;86
+14038;Lucena;Córdoba;1.223;381;4,7;88
+14042;Montilla;Córdoba;392;372;4,6;92
+14049;Palma del Río;Córdoba;268;364;4,3;91
+14055;Priego de Córdoba;Córdoba;301;336;3,6;104
+14056;Puente Genil;Córdoba;507;381;4,4;96
+18017;Almuñécar;Granada;1.266;584;7,5;85
+18021;Armilla;Granada;2.038;534;6,9;83
+18022;Atarfe;Granada;848;443;5,3;91
+18023;Baza;Granada;533;379;3,7;111
+18087;Granada;Granada;18.679;628;7,3;93
+18122;Loja;Granada;317;340;3,7;104
+18127;Maracena;Granada;1.311;475;6,0;86
+18140;Motril;Granada;2.022;478;5,6;91
+18193;Zubia, La;Granada;1.202;468;6,1;85
+18905;Gabias, Las;Granada;1.411;435;6,0;79
+21002;Aljaraque;Huelva;332;655;6,5;104
+21005;Almonte;Huelva;305;486;5,7;98
+21010;Ayamonte;Huelva;567;483;5,5;91
+21021;Cartaya;Huelva;459;484;5,4;96
+21041;Huelva;Huelva;5.142;542;7,2;80
+21042;Isla Cristina;Huelva;560;450;5,9;81
+21044;Lepe;Huelva;553;445;5,4;95
+21050;Moguer;Huelva;340;467;5,7;91
+23002;Alcalá la Real;Jaén;533;375;3,8;107
+23005;Andújar;Jaén;810;365;3,9;101
+23050;Jaén;Jaén;5.174;513;6,2;89
+23055;Linares;Jaén;1.730;401;4,4;99
+23060;Martos;Jaén;493;408;4,2;104
+23092;Ubeda;Jaén;1.407;400;4,0;108
+29007;Alhaurín de la Torre;Málaga;1.072;796;8,8;99
+29008;Alhaurín el Grande;Málaga;637;761;7,5;114
+29015;Antequera;Málaga;1.166;521;5,7;101
+29025;Benalmádena;Málaga;4.492;790;10,9;78
+29038;Cártama;Málaga;513;664;7,4;102
+29042;Coín;Málaga;574;612;6,7;100
+29051;Estepona;Málaga;3.424;805;9,3;92
+29054;Fuengirola;Málaga;5.003;741;10,1;80
+29067;Málaga;Málaga;27.624;804;10,2;85
+29069;Marbella;Málaga;7.296;985;10,8;95
+29070;Mijas;Málaga;4.044;734;9,4;84
+29075;Nerja;Málaga;809;669;8,5;87
+29082;Rincón de la Victoria;Málaga;2.852;772;9,3;88
+29084;Ronda;Málaga;1.310;468;5,4;93
+29091;Torrox;Málaga;901;588;8,4;77
+29094;Vélez-Málaga;Málaga;3.046;625;7,3;93
+29901;Torremolinos;Málaga;4.572;742;11,0;74
+41004;Alcalá de Guadaíra;Sevilla;1.733;562;6,5;91
+41017;Bormujos;Sevilla;726;786;8,1;106
+41021;Camas;Sevilla;1.358;568;7,7;79
+41024;Carmona;Sevilla;490;517;5,5;107
+41034;Coria del Río;Sevilla;787;477;5,7;91
+41038;Dos Hermanas;Sevilla;3.862;640;7,6;89
+41039;Ecija;Sevilla;1.131;340;4,2;90
+41053;Lebrija;Sevilla;242;418;4,4;105
+41058;Mairena del Alcor;Sevilla;361;529;5,0;114
+41059;Mairena del Aljarafe;Sevilla;2.278;716;8,5;89
+41065;Morón de la Frontera;Sevilla;441;400;4,7;95
+41069;Palacios y Villafranca, Los;Sevilla;279;435;4,8;98
+41081;Rinconada, La;Sevilla;758;561;6,2;98
+41086;San Juan de Aznalfarache;Sevilla;1.210;567;7,9;74
+41091;Sevilla;Sevilla;35.788;731;9,6;81
+41093;Tomares;Sevilla;1.044;756;7,7;104
+41095;Utrera;Sevilla;1.089;495;5,5;98
+22125;Huesca;Huesca;4.809;525;7,0;81
+44216;Teruel;Teruel;2.902;497;6,1;89
+50067;Calatayud;Zaragoza;1.345;409;5,0;88
+50297;Zaragoza;Zaragoza;54.776;572;8,0;75
+33004;Avilés;Asturias;4.309;463;6,3;78
+33016;Castrillón;Asturias;1.050;500;6,5;83
+33024;Gijón;Asturias;20.030;558;7,7;76
+33031;Langreo;Asturias;1.437;364;5,1;79
+33037;Mieres;Asturias;1.422;373;5,2;77
+33044;Oviedo;Asturias;18.654;531;7,8;73
+33066;Siero;Asturias;2.707;464;6,2;81
+07003;Alcúdia;Balears, Illes;1.593;760;8,7;99
+07011;Calvià;Balears, Illes;4.063;979;13,3;81
+07015;Ciutadella de Menorca;Balears, Illes;1.671;612;7,9;90
+07026;Eivissa;Balears, Illes;5.840;1.034;13,5;81
+07027;Inca;Balears, Illes;2.168;663;7,3;100
+07031;Llucmajor;Balears, Illes;2.808;840;9,3;106
+07032;Maó-Mahón;Balears, Illes;2.648;630;7,3;97
+07033;Manacor;Balears, Illes;2.771;643;6,6;107
+07036;Marratxí;Balears, Illes;1.194;973;8,7;124
+07040;Palma de Mallorca;Balears, Illes;34.211;878;10,5;92
+07046;Sant Antoni de Portmany;Balears, Illes;2.416;1.009;12,8;89
+07048;Sant Josep de sa Talaia;Balears, Illes;2.098;1.220;14,9;95
+07054;Santa Eulalia del Río;Balears, Illes;3.778;1.192;13,5;99
+35002;Agüimes;Palmas, Las;1.809;556;7,5;86
+35004;Arrecife;Palmas, Las;4.691;571;7,3;88
+35006;Arucas;Palmas, Las;1.468;563;6,6;94
+35009;Gáldar;Palmas, Las;603;526;6,1;104
+35011;Ingenio;Palmas, Las;1.215;491;6,1;97
+35012;Mogán;Palmas, Las;1.316;720;12,9;66
+35014;Oliva, La;Palmas, Las;1.468;640;9,6;79
+35015;Pájara;Palmas, Las;1.066;615;9,6;73
+35016;Palmas de Gran Canaria, Las;Palmas, Las;22.703;653;8,8;83
+35017;Puerto del Rosario;Palmas, Las;3.537;542;7,0;86
+35019;San Bartolomé de Tirajana;Palmas, Las;3.585;759;11,8;79
+35022;Santa Lucía de Tirajana;Palmas, Las;4.414;527;7,0;83
+35024;Teguise;Palmas, Las;921;736;8,8;98
+35026;Telde;Palmas, Las;4.806;563;7,3;87
+35028;Tías;Palmas, Las;1.268;683;10,1;83
+38001;Adeje;Santa Cruz de Tenerife;2.414;758;10,9;73
+38006;Arona;Santa Cruz de Tenerife;5.626;636;9,9;72
+38011;Candelaria;Santa Cruz de Tenerife;2.104;650;9,7;74
+38017;Granadilla de Abona;Santa Cruz de Tenerife;3.356;612;8,9;76
+38019;Guía de Isora;Santa Cruz de Tenerife;991;620;8,6;82
+38020;Güímar;Santa Cruz de Tenerife;1.074;574;8,3;79
+38022;Icod de los Vinos;Santa Cruz de Tenerife;651;518;5,8;103
+38023;San Cristóbal de La Laguna;Santa Cruz de Tenerife;10.676;588;7,6;84
+38024;Llanos de Aridane, Los;Santa Cruz de Tenerife;837;531;6,9;88
+38026;Orotava, La;Santa Cruz de Tenerife;1.069;581;6,2;106
+38028;Puerto de la Cruz;Santa Cruz de Tenerife;2.400;634;10,8;67
+38031;Realejos, Los;Santa Cruz de Tenerife;1.189;528;6,4;95
+38035;San Miguel de Abona;Santa Cruz de Tenerife;808;664;8,9;84
+38038;Santa Cruz de Tenerife;Santa Cruz de Tenerife;12.969;641;8,3;83
+38043;Tacoronte;Santa Cruz de Tenerife;736;610;7,1;97
+39016;Camargo;Cantabria;1.321;555;7,0;84
+39020;Castro-Urdiales;Cantabria;1.369;647;8,5;82
+39052;Piélagos;Cantabria;1.174;587;6,7;93
+39075;Santander;Cantabria;12.958;640;8,7;77
+39087;Torrelavega;Cantabria;2.593;496;6,6;79
+05019;Ávila;Ávila;4.561;501;6,2;85
+09018;Aranda de Duero;Burgos;2.104;492;6,5;81
+09059;Burgos;Burgos;11.301;549;7,4;79
+09219;Miranda de Ebro;Burgos;1.669;494;6,4;81
+24089;León;León;10.505;508;6,0;91
+24115;Ponferrada;León;4.173;414;5,2;87
+24142;San Andrés del Rabanedo;León;1.781;431;5,6;84
+34120;Palencia;Palencia;5.004;459;6,1;81
+37274;Salamanca;Salamanca;13.947;557;6,8;86
+40194;Segovia;Segovia;4.438;600;7,4;87
+42173;Soria;Soria;3.035;558;7,1;84
+47010;Arroyo de la Encomienda;Valladolid;1.467;578;7,3;84
+47076;Laguna de Duero;Valladolid;978;530;5,9;93
+47085;Medina del Campo;Valladolid;979;397;4,9;87
+47186;Valladolid;Valladolid;21.740;560;7,1;82
+49275;Zamora;Zamora;4.014;431;5,2;89
+02003;Albacete;Albacete;9.928;557;6,3;93
+02009;Almansa;Albacete;786;403;4,4;99
+02037;Hellín;Albacete;943;358;3,8;105
+02081;Villarrobledo;Albacete;652;364;3,5;116
+13005;Alcázar de San Juan;Ciudad Real;1.438;442;5,4;93
+13034;Ciudad Real;Ciudad Real;5.348;467;6,1;83
+13071;Puertollano;Ciudad Real;1.041;413;4,7;93
+13082;Tomelloso;Ciudad Real;1.163;361;4,5;91
+13087;Valdepeñas;Ciudad Real;1.539;383;5,1;84
+16078;Cuenca;Cuenca;3.112;520;6,0;91
+19046;Azuqueca de Henares;Guadalajara;2.963;571;7,8;78
+19130;Guadalajara;Guadalajara;6.710;622;7,6;87
+45081;Illescas;Toledo;1.605;674;6,9;106
+45161;Seseña;Toledo;1.638;674;6,6;108
+45165;Talavera de la Reina;Toledo;4.794;443;5,5;87
+45168;Toledo;Toledo;6.460;623;7,6;89
+08015;Badalona;Barcelona;12.281;776;10,4;80
+08019;Barcelona;Barcelona;146.855;1.008;14,3;75
+08035;Calella;Barcelona;1.737;611;8,4;80
+08051;Castellar del Vallès;Barcelona;1.107;732;7,5;107
+08056;Castelldefels;Barcelona;5.417;1.070;13,5;83
+08073;Cornellà de Llobregat;Barcelona;6.294;740;11,5;68
+08076;Esparreguera;Barcelona;1.302;648;8,2;87
+08077;Esplugues de Llobregat;Barcelona;2.959;916;13,3;71
+08086;Franqueses del Vallès, Les;Barcelona;1.241;693;9,4;83
+08089;Gavà;Barcelona;2.664;980;11,3;90
+08096;Granollers;Barcelona;4.728;715;8,9;86
+08101;Hospitalet de Llobregat, L;Barcelona;21.142;749;13,3;60
+08102;Igualada;Barcelona;3.008;557;6,8;94
+08112;Manlleu;Barcelona;1.239;478;5,2;113
+08113;Manresa;Barcelona;6.201;540;6,6;91
+08114;Martorell;Barcelona;1.552;661;8,1;91
+08118;Masnou, El;Barcelona;2.067;924;10,4;96
+08121;Mataró;Barcelona;8.850;708;9,3;83
+08123;Molins de Rei;Barcelona;1.476;814;9,8;90
+08124;Mollet del Vallès;Barcelona;3.170;690;8,6;84
+08125;Montcada i Reixac;Barcelona;1.781;690;8,9;85
+08147;Olesa de Montserrat;Barcelona;1.399;644;8,3;85
+08163;Pineda de Mar;Barcelona;2.404;606;8,3;80
+08169;Prat de Llobregat, El;Barcelona;3.227;779;10,9;77
+08172;Premià de Mar;Barcelona;2.297;784;9,7;86
+08180;Ripollet;Barcelona;2.072;689;9,5;77
+08184;Rubí;Barcelona;4.526;724;9,4;83
+08187;Sabadell;Barcelona;12.503;739;8,8;91
+08194;Sant Adrià de Besòs;Barcelona;1.635;792;11,0;76
+08196;Sant Andreu de la Barca;Barcelona;1.415;699;8,8;84
+08200;Sant Boi de Llobregat;Barcelona;4.321;737;11,0;71
+08205;Sant Cugat del Vallès;Barcelona;6.062;1.272;13,5;99
+08211;Sant Feliu de Llobregat;Barcelona;2.662;839;11,4;77
+08217;Sant Joan Despí;Barcelona;2.058;899;11,8;80
+08219;Vilassar de Mar;Barcelona;1.813;964;10,6;98
+08221;Sant Just Desvern;Barcelona;1.093;1.281;12,9;104
+08231;Sant Pere de Ribes;Barcelona;1.994;804;9,7;95
+08238;Sant Quirze del Vallès;Barcelona;789;946;10,0;102
+08245;Santa Coloma de Gramenet;Barcelona;7.365;666;10,1;69
+08252;Barberà del Vallès;Barcelona;1.439;740;9,2;85
+08260;Santa Perpètua de Mogoda;Barcelona;1.117;720;8,8;86
+08263;Sant Vicenç dels Horts;Barcelona;1.133;733;8,9;88
+08266;Cerdanyola del Vallès;Barcelona;3.485;809;10,1;84
+08270;Sitges;Barcelona;3.162;1.136;14,0;88
+08279;Terrassa;Barcelona;13.839;686;9,2;83
+08298;Vic;Barcelona;4.677;610;7,1;94
+08301;Viladecans;Barcelona;3.037;806;10,4;82
+08305;Vilafranca del Penedès;Barcelona;3.282;634;7,5;92
+08307;Vilanova i la Geltrú;Barcelona;4.805;746;9,2;88
+17015;Banyoles;Girona;1.706;592;6,6;101
+17023;Blanes;Girona;3.431;568;8,2;76
+17066;Figueres;Girona;4.199;538;6,3;97
+17079;Girona;Girona;11.012;724;9,4;83
+17095;Lloret de Mar;Girona;3.173;575;8,9;71
+17114;Olot;Girona;2.950;542;6,1;105
+17117;Palafrugell;Girona;1.440;589;6,8;100
+17152;Roses;Girona;1.545;562;7,8;82
+17155;Salt;Girona;1.819;558;6,8;87
+17160;Sant Feliu de Guíxols;Girona;1.741;633;7,7;90
+25120;Lleida;Lleida;11.402;544;6,8;86
+43014;Amposta;Tarragona;1.124;388;5,1;84
+43037;Calafell;Tarragona;2.759;654;8,9;80
+43038;Cambrils;Tarragona;2.628;631;8,5;82
+43123;Reus;Tarragona;6.975;545;6,9;86
+43148;Tarragona;Tarragona;10.421;616;8,0;82
+43155;Tortosa;Tarragona;2.367;437;5,3;91
+43161;Valls;Tarragona;1.508;492;5,8;90
+43163;Vendrell, El;Tarragona;3.334;573;7,2;87
+43171;Vila-seca;Tarragona;1.664;551;7,5;80
+43905;Salou;Tarragona;3.036;577;8,9;70
+03009;Alcoy/Alcoi;Alicante/Alacant;3.130;409;4,8;91
+03011;Alfàs del Pi, l;Alicante/Alacant;1.250;701;8,4;89
+03014;Alicante/Alacant;Alicante/Alacant;20.228;684;7,9;92
+03015;Almoradí;Alicante/Alacant;736;412;4,7;95
+03018;Altea;Alicante/Alacant;1.932;723;7,8;100
+03019;Aspe;Alicante/Alacant;448;458;4,5;109
+03031;Benidorm;Alicante/Alacant;6.560;610;9,1;72
+03047;Calp;Alicante/Alacant;1.713;647;7,9;89
+03050;Campello, el;Alicante/Alacant;1.870;748;9,2;87
+03059;Crevillent;Alicante/Alacant;631;404;4,3;101
+03063;Dénia;Alicante/Alacant;3.298;634;7,4;95
+03065;Elche/Elx;Alicante/Alacant;10.003;519;5,8;96
+03066;Elda;Alicante/Alacant;1.474;425;4,7;96
+03079;Ibi;Alicante/Alacant;896;400;4,3;100
+03082;Jávea/Xàbia;Alicante/Alacant;1.756;797;7,9;109
+03090;Mutxamel;Alicante/Alacant;926;608;7,1;95
+03093;Novelda;Alicante/Alacant;671;430;4,1;108
+03099;Orihuela;Alicante/Alacant;2.179;511;6,2;94
+03104;Petrer;Alicante/Alacant;698;442;4,8;97
+03119;Sant Joan Alacant;Alicante/Alacant;1.386;648;6,9;98
+03121;Santa Pola;Alicante/Alacant;2.153;576;7,9;78
+03122;San Vicente del Raspeig/Sant Vicent del Raspeig;Alicante/Alacant;2.927;607;6,8;94
+03133;Torrevieja;Alicante/Alacant;4.873;486;7,5;70
+03139;Villajoyosa/Vila Joiosa, la;Alicante/Alacant;3.048;534;7,0;86
+03140;Villena;Alicante/Alacant;1.102;395;4,0;105
+03902;Pilar de la Horadada;Alicante/Alacant;1.071;482;5,9;91
+12009;Almazora/Almassora;Castellón/Castelló;1.548;438;4,9;97
+12027;Benicarló;Castellón/Castelló;2.407;394;5,4;81
+12028;Benicasim/Benicàssim;Castellón/Castelló;1.390;617;7,6;89
+12032;Borriana/Burriana;Castellón/Castelló;1.501;451;4,9;100
+12040;Castellón de la Plana/Castelló de la Plana;Castellón/Castelló;12.175;515;5,8;95
+12084;Onda;Castellón/Castelló;1.122;409;4,9;90
+12126;Vall Uixó, la;Castellón/Castelló;961;422;4,5;99
+12135;Vila-real;Castellón/Castelló;2.193;477;5,1;100
+12138;Vinaròs;Castellón/Castelló;2.531;448;5,5;88
+46005;Alaquàs;Valencia/València;1.454;524;6,5;84
+46013;Alboraya;Valencia/València;1.803;789;8,9;93
+46017;Alzira;Valencia/València;1.776;486;5,0;104
+46021;Aldaia;Valencia/València;1.646;532;6,3;89
+46022;Alfafar;Valencia/València;1.106;524;6,1;88
+46029;Algemesí;Valencia/València;863;412;4,4;101
+46070;Bétera;Valencia/València;1.340;880;7,5;114
+46078;Burjassot;Valencia/València;2.589;583;6,8;90
+46083;Carcaixent;Valencia/València;672;430;4,5;103
+46094;Catarroja;Valencia/València;1.494;549;6,0;95
+46102;Quart de Poblet;Valencia/València;1.381;501;6,6;80
+46105;Cullera;Valencia/València;1.260;527;6,7;86
+46110;Xirivella;Valencia/València;1.628;532;6,5;85
+46131;Gandia;Valencia/València;4.457;512;5,7;97
+46145;Xàtiva;Valencia/València;1.505;458;5,0;98
+46147;Llíria;Valencia/València;1.196;478;5,1;101
+46159;Manises;Valencia/València;1.563;550;7,0;85
+46169;Mislata;Valencia/València;2.727;593;7,2;86
+46171;Moncada;Valencia/València;1.148;646;7,3;92
+46181;Oliva;Valencia/València;1.066;466;5,1;102
+46184;Ontinyent;Valencia/València;1.433;408;4,4;99
+46186;Paiporta;Valencia/València;1.383;563;6,5;91
+46190;Paterna;Valencia/València;3.767;687;7,3;97
+46194;Picassent;Valencia/València;1.051;542;6,0;97
+46202;Pobla de Vallbona, la;Valencia/València;1.099;668;6,6;105
+46205;Puçol;Valencia/València;1.071;702;7,2;99
+46213;Requena;Valencia/València;897;393;4,0;108
+46214;Riba-roja de Túria;Valencia/València;899;654;6,3;108
+46220;Sagunto/Sagunt;Valencia/València;3.283;578;6,6;92
+46230;Silla;Valencia/València;918;501;5,8;93
+46235;Sueca;Valencia/València;1.106;443;5,0;95
+46244;Torrent;Valencia/València;4.563;599;6,9;92
+46250;Valencia;Valencia/València;66.254;753;8,9;88
+06011;Almendralejo;Badajoz;946;362;4,0;97
+06015;Badajoz;Badajoz;8.590;511;6,1;90
+06044;Don Benito;Badajoz;1.288;376;4,5;93
+06083;Mérida;Badajoz;2.957;450;5,3;89
+06153;Villanueva de la Serena;Badajoz;676;353;3,9;99
+10037;Cáceres;Cáceres;6.259;500;5,6;94
+10148;Plasencia;Cáceres;2.225;421;4,7;95
+15002;Ames;Coruña, A;3.363;436;5,8;81
+15005;Arteixo;Coruña, A;2.830;452;5,3;93
+15017;Cambre;Coruña, A;1.499;493;6,1;88
+15019;Carballo;Coruña, A;1.596;347;3,8;100
+15030;Coruña, A;Coruña, A;25.706;576;7,6;81
+15031;Culleredo;Coruña, A;2.284;502;6,4;85
+15036;Ferrol;Coruña, A;4.098;419;5,0;90
+15054;Narón;Coruña, A;2.109;390;4,4;96
+15058;Oleiros;Coruña, A;2.360;604;6,8;98
+15073;Ribeira;Coruña, A;1.031;380;4,9;90
+15078;Santiago de Compostela;Coruña, A;11.345;543;7,4;83
+27028;Lugo;Lugo;7.807;432;5,1;93
+32054;Ourense;Ourense;10.003;437;5,5;86
+36008;Cangas;Pontevedra;1.246;471;5,8;90
+36017;Estrada, A;Pontevedra;615;353;3,8;105
+36024;Lalín;Pontevedra;998;331;4,1;93
+36026;Marín;Pontevedra;827;418;4,9;100
+36038;Pontevedra;Pontevedra;5.674;542;6,5;91
+36039;Porriño, O;Pontevedra;1.184;471;6,3;87
+36042;Ponteareas;Pontevedra;1.129;395;4,6;94
+36045;Redondela;Pontevedra;1.013;466;5,5;98
+36057;Vigo;Pontevedra;23.877;581;8,0;82
+36060;Vilagarcía de Arousa;Pontevedra;1.776;459;5,4;94
+28005;Alcalá de Henares;Madrid;13.089;735;9,9;77
+28006;Alcobendas;Madrid;7.406;1.115;12,7;86
+28007;Alcorcón;Madrid;9.206;760;10,6;74
+28009;Algete;Madrid;816;866;8,6;104
+28013;Aranjuez;Madrid;4.336;601;8,3;80
+28014;Arganda del Rey;Madrid;3.405;658;8,4;83
+28015;Arroyomolinos;Madrid;1.168;903;9,3;103
+28022;Boadilla del Monte;Madrid;2.261;1.463;12,7;119
+28040;Ciempozuelos;Madrid;1.526;574;8,2;77
+28045;Colmenar Viejo;Madrid;3.819;776;8,8;95
+28047;Collado Villalba;Madrid;5.171;713;9,9;77
+28049;Coslada;Madrid;4.143;759;10,4;77
+28058;Fuenlabrada;Madrid;8.611;700;9,4;77
+28061;Galapagar;Madrid;2.583;726;8,9;88
+28065;Getafe;Madrid;12.377;752;10,6;74
+28073;Humanes de Madrid;Madrid;1.050;644;8,7;79
+28074;Leganés;Madrid;10.646;715;10,2;73
+28079;Madrid;Madrid;310.601;1.012;15,1;71
+28080;Majadahonda;Madrid;4.409;1.261;13,6;97
+28084;Mejorada del Campo;Madrid;972;702;9,1;85
+28092;Móstoles;Madrid;9.788;741;9,6;80
+28096;Navalcarnero;Madrid;1.535;692;8,1;92
+28104;Paracuellos de Jarama;Madrid;1.426;949;9,9;102
+28106;Parla;Madrid;6.037;670;8,6;81
+28113;Pinto;Madrid;3.082;721;9,8;77
+28115;Pozuelo de Alarcón;Madrid;4.550;1.494;13,8;113
+28123;Rivas-Vaciamadrid;Madrid;3.366;939;9,4;102
+28127;Rozas de Madrid, Las;Madrid;6.040;1.113;13,6;88
+28130;San Fernando de Henares;Madrid;1.909;714;10,1;74
+28132;San Martín de la Vega;Madrid;802;670;7,1;101
+28134;San Sebastián de los Reyes;Madrid;5.827;928;12,0;80
+28148;Torrejón de Ardoz;Madrid;7.494;736;9,6;80
+28152;Torrelodones;Madrid;1.085;1.147;11,5;112
+28161;Valdemoro;Madrid;4.090;716;9,4;82
+28176;Villanueva de la Cañada;Madrid;1.534;1.028;11,7;99
+28181;Villaviciosa de Odón;Madrid;1.280;1.092;12,6;95
+28903;Tres Cantos;Madrid;2.934;1.040;11,9;92
+30003;Aguilas;Murcia;1.296;454;5,2;94
+30005;Alcantarilla;Murcia;1.492;417;4,6;96
+30008;Alhama de Murcia;Murcia;906;408;5,2;89
+30009;Archena;Murcia;550;394;4,5;96
+30015;Caravaca de la Cruz;Murcia;596;382;3,9;108
+30016;Cartagena;Murcia;9.066;508;5,5;99
+30019;Cieza;Murcia;1.034;352;4,0;93
+30022;Jumilla;Murcia;853;368;3,7;108
+30024;Lorca;Murcia;4.029;466;5,0;101
+30026;Mazarrón;Murcia;1.136;397;5,3;83
+30027;Molina de Segura;Murcia;2.332;559;5,4;107
+30030;Murcia;Murcia;21.520;563;6,8;90
+30035;San Javier;Murcia;1.939;472;6,1;83
+30036;San Pedro del Pinatar;Murcia;1.368;434;5,5;86
+30037;Torre-Pacheco;Murcia;1.512;431;4,6;102
+30038;Torres de Cotillas, Las;Murcia;403;458;4,8;103
+30039;Totana;Murcia;1.240;408;4,2;104
+30041;Unión, La;Murcia;647;421;5,2;86
+30043;Yecla;Murcia;1.255;357;3,8;102
+30902;Alcázares, Los;Murcia;1.290;439;5,8;81
+26036;Calahorra;Rioja, La;1.154;492;5,7;92
+26089;Logroño;Rioja, La;10.400;534;6,7;83
+51001;Ceuta;Ceuta;2.674;706;9,8;79
+52001;Melilla;Melilla;3.257;656;9,1;81

@@ -1,0 +1,48 @@
+relationship 2f56336f-b96d-50eb-80c5-3682253a0cae
+	fromColumn: fact_alquiler_provincia.cod_prov
+	toColumn: dim_provincia.cod_prov
+
+relationship fb8caeed-be96-5ed4-80b6-0701e4d22d56
+	fromColumn: fact_alquiler_provincia.anio
+	toColumn: dim_anio.anio
+
+relationship a4c14ae3-4921-591c-b638-a73b01e20e3e
+	fromColumn: fact_alquiler_municipio.cod_prov
+	toColumn: dim_provincia.cod_prov
+
+relationship 7e9a0476-4db5-53b2-8771-a055b8a847dd
+	fromColumn: fact_salarios.cod_prov
+	toColumn: dim_provincia.cod_prov
+
+relationship b3aa2970-e44c-5bb4-a432-e13d462c68a4
+	fromColumn: fact_salarios.anio
+	toColumn: dim_anio.anio
+
+relationship ff0f8f90-bb57-57f6-8df9-43f7536982d6
+	fromColumn: fact_salarios.tramo_edad
+	toColumn: dim_tramo_edad.tramo_edad
+
+relationship 68259f62-34be-5072-b461-f50459dff644
+	fromColumn: fact_ipva.cod_prov
+	toColumn: dim_provincia.cod_prov
+
+relationship 22becbf3-9045-59c0-abfa-1ad2d2777739
+	fromColumn: fact_ipva.anio
+	toColumn: dim_anio.anio
+
+relationship 37d53b11-bb18-5f78-9a39-d11600a5ac9b
+	fromColumn: fact_alquiler_espana.anio
+	toColumn: dim_anio.anio
+
+relationship 47f78e30-1e79-547d-8eb1-b575f43c393b
+	fromColumn: fact_ipva_espana.anio
+	toColumn: dim_anio.anio
+
+relationship b9c61aa4-8fb3-58d1-a3d0-45858e075438
+	fromColumn: fact_salarios_espana.anio
+	toColumn: dim_anio.anio
+
+relationship ea6722be-51fb-5562-b5b9-6772942f1143
+	fromColumn: fact_salarios_espana.tramo_edad
+	toColumn: dim_tramo_edad.tramo_edad
+

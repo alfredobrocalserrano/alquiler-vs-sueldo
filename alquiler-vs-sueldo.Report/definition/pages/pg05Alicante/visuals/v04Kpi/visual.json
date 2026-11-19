@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v04Kpi",
+  "position": {
+    "x": 959,
+    "y": 86,
+    "z": 1004,
+    "height": 104,
+    "width": 301,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Alquiler nuevos contratos"
+                }
+              },
+              "queryRef": "_Medidas.Alquiler nuevos contratos",
+              "nativeQueryRef": "Alquiler nuevos contratos",
+              "displayName": "Alquiler contrato nuevo (€/mes)"
+            }
+          ]
+        },
+        "ReferenceLabels": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Sobrecoste contrato nuevo"
+                }
+              },
+              "queryRef": "_Medidas.Sobrecoste contrato nuevo",
+              "nativeQueryRef": "Sobrecoste contrato nuevo",
+              "displayName": "Sobre la media de contratos"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "referenceLabel": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Alquiler mensual de un contrato nuevo en Alicante y sobrecoste frente a la media'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

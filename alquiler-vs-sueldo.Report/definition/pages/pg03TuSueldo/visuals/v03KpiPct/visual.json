@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v03KpiPct",
+  "position": {
+    "x": 959,
+    "y": 86,
+    "z": 1003,
+    "height": 104,
+    "width": 301,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "% de tu sueldo"
+                }
+              },
+              "queryRef": "_Medidas.% de tu sueldo",
+              "nativeQueryRef": "% de tu sueldo",
+              "displayName": "% de tu sueldo (media España)"
+            }
+          ]
+        },
+        "ReferenceLabels": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Umbral 30 %"
+                }
+              },
+              "queryRef": "_Medidas.Umbral 30 %",
+              "nativeQueryRef": "Umbral 30 %",
+              "displayName": "Umbral recomendado"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "referenceLabel": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Porcentaje del sueldo indicado que costaría un alquiler nuevo medio en España'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

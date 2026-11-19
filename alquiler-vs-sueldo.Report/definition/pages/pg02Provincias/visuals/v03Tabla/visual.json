@@ -1,0 +1,360 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v03Tabla",
+  "position": {
+    "x": 646,
+    "y": 86,
+    "z": 1003,
+    "height": 590,
+    "width": 614,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_provincia"
+                    }
+                  },
+                  "Property": "provincia_corta"
+                }
+              },
+              "queryRef": "dim_provincia.provincia_corta",
+              "nativeQueryRef": "provincia_corta",
+              "displayName": "Provincia"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Salario 2024"
+                }
+              },
+              "queryRef": "_Medidas.Salario 2024",
+              "nativeQueryRef": "Salario 2024",
+              "displayName": "Salario bruto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Alquiler medio"
+                }
+              },
+              "queryRef": "_Medidas.Alquiler medio",
+              "nativeQueryRef": "Alquiler medio",
+              "displayName": "Alquiler medio"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Alquiler nuevos contratos"
+                }
+              },
+              "queryRef": "_Medidas.Alquiler nuevos contratos",
+              "nativeQueryRef": "Alquiler nuevos contratos",
+              "displayName": "Contrato nuevo"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Sobrecoste contrato nuevo"
+                }
+              },
+              "queryRef": "_Medidas.Sobrecoste contrato nuevo",
+              "nativeQueryRef": "Sobrecoste contrato nuevo",
+              "displayName": "Sobrecoste"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Alquiler €/m²"
+                }
+              },
+              "queryRef": "_Medidas.Alquiler €/m²",
+              "nativeQueryRef": "Alquiler €/m²",
+              "displayName": "€/m²"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "m² medios"
+                }
+              },
+              "queryRef": "_Medidas.m² medios",
+              "nativeQueryRef": "m² medios",
+              "displayName": "m²"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "% sueldo contrato nuevo"
+                }
+              },
+              "queryRef": "_Medidas.% sueldo contrato nuevo",
+              "nativeQueryRef": "% sueldo contrato nuevo",
+              "displayName": "% sueldo (nuevo)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "% sueldo contrato nuevo"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Medidas"
+                        }
+                      },
+                      "Property": "Color esfuerzo"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "_Medidas.% sueldo contrato nuevo"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Detalle por provincia'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tabla por provincia con salario, alquiler medio y de contrato nuevo, sobrecoste, precio por metro cuadrado, superficie y porcentaje del sueldo'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e97cc30a036821cc8ddb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_provincia"
+              }
+            },
+            "Property": "provincia_corta"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b11df1d9088d7c561d83",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Salario 2024"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c37739aa568302bb4d1e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Alquiler medio"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8518914d6c30a3cd8588",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Alquiler nuevos contratos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d331c8fa0b863208cebd",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Sobrecoste contrato nuevo"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e69b7d03c3c5db059bb3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Alquiler €/m²"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "bdc69391ac9d6a32eb37",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "m² medios"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3a879987c27cd0d35151",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "% sueldo contrato nuevo"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

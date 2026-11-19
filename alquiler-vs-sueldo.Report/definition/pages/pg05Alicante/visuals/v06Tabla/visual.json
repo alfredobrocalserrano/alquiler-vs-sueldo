@@ -1,0 +1,244 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v06Tabla",
+  "position": {
+    "x": 646,
+    "y": 202,
+    "z": 1006,
+    "height": 474,
+    "width": 614,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_alquiler_municipio"
+                    }
+                  },
+                  "Property": "municipio"
+                }
+              },
+              "queryRef": "fact_alquiler_municipio.municipio",
+              "nativeQueryRef": "municipio",
+              "displayName": "Municipio"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Alquiler nuevo municipio"
+                }
+              },
+              "queryRef": "_Medidas.Alquiler nuevo municipio",
+              "nativeQueryRef": "Alquiler nuevo municipio",
+              "displayName": "Contrato nuevo (€/mes)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Alquiler medio municipio"
+                }
+              },
+              "queryRef": "_Medidas.Alquiler medio municipio",
+              "nativeQueryRef": "Alquiler medio municipio",
+              "displayName": "Media (€/mes)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "% sueldo contrato nuevo municipio"
+                }
+              },
+              "queryRef": "_Medidas.% sueldo contrato nuevo municipio",
+              "nativeQueryRef": "% sueldo contrato nuevo municipio",
+              "displayName": "% sueldo (estimado)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "% sueldo contrato nuevo municipio"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Medidas"
+                        }
+                      },
+                      "Property": "Color esfuerzo municipio"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "_Medidas.% sueldo contrato nuevo municipio"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Esfuerzo estimado por municipio (sobre el salario medio provincial)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tabla de municipios de Alicante con alquiler nuevo, alquiler medio y porcentaje estimado del sueldo provincial'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "71f49974948109840064",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_alquiler_municipio"
+              }
+            },
+            "Property": "municipio"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7b0a49b1485b10434695",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Alquiler nuevo municipio"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5ad53b27076c22823678",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Alquiler medio municipio"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8f7e83ad8b07a76ed21e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "% sueldo contrato nuevo municipio"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

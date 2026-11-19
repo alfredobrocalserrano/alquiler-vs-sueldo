@@ -1,0 +1,27 @@
+table 'Tu sueldo'
+	lineageTag: 93c4eb87-d253-4095-a491-0854e88a46d2
+
+	measure 'Valor Tu sueldo' = SELECTEDVALUE('Tu sueldo'[Tu sueldo bruto anual], 24000)
+		formatString: #,0 €
+		lineageTag: b5ade548-3e22-4678-9d9f-d690ba0b330a
+
+	column 'Tu sueldo bruto anual'
+		dataType: int64
+		formatString: #,0 €
+		lineageTag: 2b21131a-f67e-4cef-a17f-4e0dd9a43729
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition 'Tu sueldo' = calculated
+		mode: import
+		source = GENERATESERIES(12000, 60000, 500)
+
+	annotation PBI_Id = tu_sueldo
+

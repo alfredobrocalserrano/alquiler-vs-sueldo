@@ -1,0 +1,178 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 98
+          },
+          "nodeIndex": "dim_anio",
+          "nodeLineageTag": "0ee07eb7-d27c-4ed0-b03e-3380eba8ebde",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 284,
+            "y": 38
+          },
+          "nodeIndex": "dim_provincia",
+          "nodeLineageTag": "1acda72f-68fc-43f1-8307-f3627b0d8c3f",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 568,
+            "y": 74
+          },
+          "nodeIndex": "dim_tramo_edad",
+          "nodeLineageTag": "dba4a06d-0da0-466e-ba4d-7238dcef429b",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 2
+          },
+          "nodeIndex": "fact_alquiler_municipio",
+          "nodeLineageTag": "6a4217d6-b87f-470f-b18d-f83cae3da929",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1136,
+            "y": 2
+          },
+          "nodeIndex": "fact_alquiler_provincia",
+          "nodeLineageTag": "f10a1cb1-dc90-45bc-ae0a-a339fccf041b",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1420,
+            "y": 74
+          },
+          "nodeIndex": "fact_ipva",
+          "nodeLineageTag": "453441c7-98ca-4096-9559-d683f817b237",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1704,
+            "y": 38
+          },
+          "nodeIndex": "fact_salarios",
+          "nodeLineageTag": "bc90a031-4df2-4182-917d-b48b37936b41",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1988,
+            "y": 0
+          },
+          "nodeIndex": "_Medidas",
+          "nodeLineageTag": "fd696b24-0377-4cd5-8929-ad3e304db84c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2272,
+            "y": 38
+          },
+          "nodeIndex": "Tu sueldo",
+          "nodeLineageTag": "93c4eb87-d253-4095-a491-0854e88a46d2",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2556,
+            "y": 38
+          },
+          "nodeIndex": "fact_alquiler_espana",
+          "nodeLineageTag": "26a262b3-96da-41bd-b300-c549e7064f69",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2840,
+            "y": 86
+          },
+          "nodeIndex": "fact_ipva_espana",
+          "nodeLineageTag": "798de479-e26e-40a8-8d72-00d4a3fd276c",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3124,
+            "y": 62
+          },
+          "nodeIndex": "fact_salarios_espana",
+          "nodeLineageTag": "690c68d1-7556-48ac-bb06-ebc2b06f7703",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

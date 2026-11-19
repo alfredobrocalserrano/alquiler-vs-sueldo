@@ -1,0 +1,77 @@
+table fact_alquiler_municipio
+	lineageTag: 6a4217d6-b87f-470f-b18d-f83cae3da929
+
+	column cod_muni
+		dataType: string
+		lineageTag: 0e0ce9d1-54f9-4646-9227-fd824e57ce12
+		summarizeBy: none
+		sourceColumn: cod_muni
+
+		annotation SummarizationSetBy = User
+
+	column municipio
+		dataType: string
+		lineageTag: c4518572-8dbc-46e8-bf67-4a2da5c704dd
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: municipio
+
+		annotation SummarizationSetBy = User
+
+	column viv_arrendadas
+		dataType: int64
+		formatString: #,0
+		lineageTag: cdc2eb97-af29-4c32-808e-c9d918247b0a
+		summarizeBy: none
+		sourceColumn: viv_arrendadas
+
+		annotation SummarizationSetBy = User
+
+	column alquiler_medio
+		dataType: int64
+		formatString: #,0 €
+		lineageTag: b99288cb-763a-448f-ae41-45ad7128b043
+		summarizeBy: none
+		sourceColumn: alquiler_medio
+
+		annotation SummarizationSetBy = User
+
+	column alquiler_nuevos
+		dataType: int64
+		formatString: #,0 €
+		lineageTag: 652f16c1-74e7-4582-bd12-0d943d197692
+		summarizeBy: none
+		sourceColumn: alquiler_nuevos
+
+		annotation SummarizationSetBy = User
+
+	column cod_prov
+		dataType: string
+		isHidden
+		lineageTag: 1b0b7885-17d7-4b28-8abf-fa16a9094c9d
+		summarizeBy: none
+		sourceColumn: cod_prov
+
+		annotation SummarizationSetBy = User
+
+	column ubicacion_mapa
+		dataType: string
+		lineageTag: 98e311f8-122e-40a1-bf6b-4ed54f450017
+		dataCategory: Place
+		summarizeBy: none
+		sourceColumn: ubicacion_mapa
+
+		annotation SummarizationSetBy = User
+
+	partition fact_alquiler_municipio = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaDatos & "fact_alquiler_municipio.csv"),[Delimiter=",", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"cod_muni", type text}, {"municipio", type text}, {"viv_arrendadas", Int64.Type}, {"alquiler_medio", Int64.Type}, {"alquiler_nuevos", Int64.Type}, {"cod_prov", type text}, {"ubicacion_mapa", type text}}, "en-US")
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table
+

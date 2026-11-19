@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v01Kpi",
+  "position": {
+    "x": 20,
+    "y": 86,
+    "z": 1001,
+    "height": 104,
+    "width": 301,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "% sueldo contrato nuevo"
+                }
+              },
+              "queryRef": "_Medidas.% sueldo contrato nuevo",
+              "nativeQueryRef": "% sueldo contrato nuevo",
+              "displayName": "% del sueldo (contrato nuevo)"
+            }
+          ]
+        },
+        "ReferenceLabels": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "% sueldo contrato nuevo España"
+                }
+              },
+              "queryRef": "_Medidas.% sueldo contrato nuevo España",
+              "nativeQueryRef": "% sueldo contrato nuevo España",
+              "displayName": "España"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "referenceLabel": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Porcentaje del sueldo medio de Alicante que cuesta un alquiler nuevo, frente a España'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,30 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-ES
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["dim_anio","dim_provincia","dim_tramo_edad","fact_alquiler_municipio","fact_alquiler_provincia","fact_ipva","fact_salarios","fact_alquiler_espana","fact_ipva_espana","fact_salarios_espana","RutaDatos"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_anio
+ref table dim_provincia
+ref table dim_tramo_edad
+ref table fact_alquiler_municipio
+ref table fact_alquiler_provincia
+ref table fact_ipva
+ref table fact_salarios
+ref table _Medidas
+ref table 'Tu sueldo'
+ref table fact_alquiler_espana
+ref table fact_ipva_espana
+ref table fact_salarios_espana
+
+ref cultureInfo es-ES
+

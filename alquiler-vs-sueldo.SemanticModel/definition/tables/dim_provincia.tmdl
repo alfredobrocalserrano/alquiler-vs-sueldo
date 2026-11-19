@@ -1,0 +1,67 @@
+table dim_provincia
+	lineageTag: 1acda72f-68fc-43f1-8307-f3627b0d8c3f
+
+	column cod_prov
+		dataType: string
+		lineageTag: 3150442e-be88-42a9-ae4a-df284a7c17b8
+		summarizeBy: none
+		sourceColumn: cod_prov
+
+		annotation SummarizationSetBy = User
+
+	column provincia
+		dataType: string
+		isHidden
+		lineageTag: dca15f73-1199-4e27-8282-41c6c3fbbd36
+		summarizeBy: none
+		sourceColumn: provincia
+
+		annotation SummarizationSetBy = User
+
+	column ccaa
+		dataType: string
+		lineageTag: cc9c44ea-fc50-415c-a0b2-c1e5b3ab60e4
+		summarizeBy: none
+		sourceColumn: ccaa
+
+		annotation SummarizationSetBy = User
+
+	column provincia_corta
+		dataType: string
+		lineageTag: 65e27e7e-afe8-44e3-b64e-7920a078bff7
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: provincia_corta
+
+		annotation SummarizationSetBy = User
+
+	column ubicacion_mapa
+		dataType: string
+		lineageTag: 0776e1aa-d543-44a7-9df1-704c98bf786b
+		dataCategory: Place
+		summarizeBy: none
+		sourceColumn: ubicacion_mapa
+
+		annotation SummarizationSetBy = User
+
+	column es_alicante
+		dataType: boolean
+		isHidden
+		lineageTag: e7ccd1e5-6c4f-42d0-abdb-f44fe5823a23
+		summarizeBy: none
+		sourceColumn: es_alicante
+
+		annotation SummarizationSetBy = User
+
+	partition dim_provincia = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaDatos & "dim_provincia.csv"),[Delimiter=",", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"cod_prov", type text}, {"provincia", type text}, {"ccaa", type text}, {"provincia_corta", type text}, {"ubicacion_mapa", type text}, {"es_alicante", type logical}}, "en-US")
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table
+

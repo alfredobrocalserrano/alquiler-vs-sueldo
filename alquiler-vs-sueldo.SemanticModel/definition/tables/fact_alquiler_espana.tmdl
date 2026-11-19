@@ -1,0 +1,69 @@
+table fact_alquiler_espana
+	lineageTag: 26a262b3-96da-41bd-b300-c549e7064f69
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: dd1fdaae-f9ad-4ccd-bf02-7a9cfe82580f
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = User
+
+	column viv_arrendadas
+		dataType: int64
+		formatString: #,0
+		lineageTag: 817566f0-657a-4f11-9040-051b440c202f
+		summarizeBy: none
+		sourceColumn: viv_arrendadas
+
+		annotation SummarizationSetBy = User
+
+	column alquiler_medio
+		dataType: int64
+		formatString: #,0 €
+		lineageTag: 17910cba-d736-4df5-aaf3-e041de1269dd
+		summarizeBy: none
+		sourceColumn: alquiler_medio
+
+		annotation SummarizationSetBy = User
+
+	column alquiler_nuevos
+		dataType: int64
+		formatString: #,0 €
+		lineageTag: d71b3bec-3582-42fd-9754-639529c6b012
+		summarizeBy: none
+		sourceColumn: alquiler_nuevos
+
+		annotation SummarizationSetBy = User
+
+	column alquiler_m2
+		dataType: double
+		formatString: #,0.0 €
+		lineageTag: 3b0d42bc-d2ba-49e7-9b63-fd9e6f3042ea
+		summarizeBy: none
+		sourceColumn: alquiler_m2
+
+		annotation SummarizationSetBy = User
+
+	column m2_medios
+		dataType: int64
+		lineageTag: 31bb6469-b4bb-483f-bacb-51ff9cc7a6d9
+		summarizeBy: none
+		sourceColumn: m2_medios
+
+		annotation SummarizationSetBy = User
+
+	partition fact_alquiler_espana = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaDatos & "fact_alquiler_espana.csv"),[Delimiter=",", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"anio", Int64.Type}, {"viv_arrendadas", Int64.Type}, {"alquiler_medio", Int64.Type}, {"alquiler_nuevos", Int64.Type}, {"alquiler_m2", type number}, {"m2_medios", Int64.Type}}, "en-US")
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,242 @@
+table _Medidas
+	lineageTag: fd696b24-0377-4cd5-8929-ad3e304db84c
+
+	measure 'Alquiler medio' =
+			VAR prov = DIVIDE(SUMX(fact_alquiler_provincia, fact_alquiler_provincia[alquiler_medio] * fact_alquiler_provincia[viv_arrendadas]), SUM(fact_alquiler_provincia[viv_arrendadas]))
+			VAR nac = SUM(fact_alquiler_espana[alquiler_medio])
+			RETURN IF(ISFILTERED(dim_provincia), prov, nac)
+		formatString: #,0 €
+		displayFolder: 1 Alquiler
+		lineageTag: ad05cd90-58ea-497a-a2b4-f100af7ea33f
+
+	measure 'Alquiler nuevos contratos' =
+			VAR prov = DIVIDE(SUMX(fact_alquiler_provincia, fact_alquiler_provincia[alquiler_nuevos] * fact_alquiler_provincia[viv_arrendadas]), SUM(fact_alquiler_provincia[viv_arrendadas]))
+			VAR nac = SUM(fact_alquiler_espana[alquiler_nuevos])
+			RETURN IF(ISFILTERED(dim_provincia), prov, nac)
+		formatString: #,0 €
+		displayFolder: 1 Alquiler
+		lineageTag: b96ad874-288e-4cb7-a7ba-01e9f524d5eb
+
+	measure 'Sobrecoste contrato nuevo' = DIVIDE([Alquiler nuevos contratos], [Alquiler medio]) - 1
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 1 Alquiler
+		lineageTag: dbdedcd3-d55c-480f-8557-eba054afcca6
+
+	measure 'Tramo seleccionado' = SELECTEDVALUE(dim_tramo_edad[tramo_edad], "Total")
+		displayFolder: 2 Salario
+		lineageTag: 76ecf429-56e3-4ff1-9b7c-bc940ec892bc
+
+	measure 'Salario medio anual' =
+			VAR t = [Tramo seleccionado]
+			VAR ponderado = CALCULATE(
+			    DIVIDE(SUMX(fact_salarios, fact_salarios[salario_medio_anual] * fact_salarios[asalariados]), SUM(fact_salarios[asalariados])),
+			    dim_tramo_edad[tramo_edad] = t)
+			VAR simple = CALCULATE(AVERAGE(fact_salarios[salario_medio_anual]), dim_tramo_edad[tramo_edad] = t)
+			VAR nac = CALCULATE(AVERAGE(fact_salarios_espana[salario_medio_anual]), dim_tramo_edad[tramo_edad] = t)
+			RETURN IF(ISFILTERED(dim_provincia), COALESCE(ponderado, simple), nac)
+		formatString: #,0 €
+		displayFolder: 2 Salario
+		lineageTag: d1f1141f-48d3-42a3-91d9-d22efd44f300
+
+	measure 'Salario 2024' = CALCULATE([Salario medio anual], dim_anio[anio] = 2024)
+		formatString: #,0 €
+		displayFolder: 2 Salario
+		lineageTag: 7274f791-08c2-4988-8f8e-58555e1ea682
+
+	measure 'Salario mensual bruto' = DIVIDE([Salario 2024], 12)
+		formatString: #,0 €
+		displayFolder: 2 Salario
+		lineageTag: 573d3d73-53db-4f34-a789-8813f0fecb40
+
+	measure '% sueldo contrato nuevo' = DIVIDE([Alquiler nuevos contratos] * 12, [Salario 2024])
+		formatString: 0.0%
+		displayFolder: 3 Esfuerzo
+		lineageTag: 80ddcd6e-d257-450a-b568-656b0396fdd9
+
+	measure '% sueldo contrato nuevo España' = CALCULATE([% sueldo contrato nuevo], REMOVEFILTERS(dim_provincia))
+		formatString: 0.0%
+		displayFolder: 3 Esfuerzo
+		lineageTag: 0772d6e0-23d1-4b77-bc99-c397a5302606
+
+	measure 'Diferencia vs España (pp)' = ([% sueldo contrato nuevo] - [% sueldo contrato nuevo España]) * 100
+		formatString: +0.0" pp";-0.0" pp";0.0" pp"
+		displayFolder: 3 Esfuerzo
+		lineageTag: 41e698dd-a477-4ac1-86b5-1ee24b4a5324
+
+	measure 'Umbral 30 %' = 0.3
+		formatString: 0%
+		displayFolder: 3 Esfuerzo
+		lineageTag: 8dac7314-9555-46ea-89b3-bcdc37674675
+
+	measure 'Provincias por encima del 30 %' = COUNTROWS(FILTER(VALUES(dim_provincia[cod_prov]), NOT ISBLANK(dim_provincia[cod_prov]) && [% sueldo contrato nuevo] > 0.3))
+		formatString: 0
+		displayFolder: 3 Esfuerzo
+		lineageTag: 95d50a58-ad7f-43a2-876a-44b319184125
+
+	measure 'Color esfuerzo' =
+			VAR p = [% sueldo contrato nuevo]
+			VAR ali = SELECTEDVALUE(dim_provincia[es_alicante], FALSE())
+			RETURN IF(ali, "#0C3549", SWITCH(TRUE(), ISBLANK(p), "#CCCCCC", p > 0.4, "#A23B2A", p > 0.3, "#B9770E", "#2E86AB"))
+		displayFolder: 3 Esfuerzo
+		lineageTag: b08d7a1e-10c5-43da-8a04-c4820635cde5
+
+	measure 'Índice alquiler (INE)' =
+			VAR prov = AVERAGE(fact_ipva[indice_alquiler])
+			VAR nac = AVERAGE(fact_ipva_espana[indice_alquiler])
+			RETURN IF(ISFILTERED(dim_provincia), prov, nac)
+		formatString: 0.0
+		displayFolder: 4 Evolución
+		lineageTag: cdf2feb1-5266-44cd-8fad-5cf3731cbd70
+
+	measure 'Índice salario' =
+			VAR base = CALCULATE([Salario medio anual], dim_anio[anio] = 2015, dim_tramo_edad[tramo_edad] = "Total")
+			RETURN DIVIDE(CALCULATE([Salario medio anual], dim_tramo_edad[tramo_edad] = "Total"), base) * 100
+		formatString: 0.0
+		displayFolder: 4 Evolución
+		lineageTag: 81bfca86-09b5-416d-93c2-276339d9396c
+
+	measure 'Subida alquiler 2015-2024' = CALCULATE([Índice alquiler (INE)], dim_anio[anio] = 2024) / 100 - 1
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 4 Evolución
+		lineageTag: 004039c8-4bac-4c89-a90b-546dbc35160f
+
+	measure 'Subida salario 2015-2024' = CALCULATE([Índice salario], dim_anio[anio] = 2024) / 100 - 1
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 4 Evolución
+		lineageTag: 44284547-c05c-4ac6-a4fb-82af1bb59396
+
+	measure '% de tu sueldo' = DIVIDE([Alquiler nuevos contratos] * 12, [Valor Tu sueldo])
+		formatString: 0.0%
+		displayFolder: 5 Tu sueldo
+		lineageTag: f1d53596-a9e3-468d-968a-87420c097fce
+
+	measure Veredicto =
+			VAR p = [% de tu sueldo]
+			RETURN IF(ISBLANK(p), BLANK(), IF(p <= 0.3, "Asumible", IF(p <= 0.4, "Justo", "No asumible")))
+		displayFolder: 5 Tu sueldo
+		lineageTag: d840ab1c-d20c-4b3d-9804-8a3b79825a21
+
+	measure 'Color tu sueldo' =
+			VAR p = [% de tu sueldo]
+			VAR ali = SELECTEDVALUE(dim_provincia[es_alicante], FALSE())
+			RETURN IF(ali, "#0C3549", SWITCH(TRUE(), ISBLANK(p), "#CCCCCC", p > 0.4, "#A23B2A", p > 0.3, "#B9770E", "#2E86AB"))
+		displayFolder: 5 Tu sueldo
+		lineageTag: a5ab4d7b-c4df-4c7a-9fba-4ad9f695a7d3
+
+	measure 'Provincias asumibles' = COUNTROWS(FILTER(VALUES(dim_provincia[cod_prov]), NOT ISBLANK(dim_provincia[cod_prov]) && [% de tu sueldo] <= 0.3))
+		formatString: 0
+		displayFolder: 5 Tu sueldo
+		lineageTag: 3fc96904-2d6c-4b63-b087-7f292107d08a
+
+	measure 'Texto provincias asumibles' = FORMAT([Provincias asumibles], "0") & " de " & FORMAT(COUNTROWS(ALLNOBLANKROW(dim_provincia)), "0")
+		displayFolder: 5 Tu sueldo
+		lineageTag: b8baaadc-2d22-477b-aa26-45cc8500f37f
+
+	measure 'Sueldo necesario (30 %)' = DIVIDE([Alquiler nuevos contratos] * 12, 0.3)
+		formatString: #,0 €
+		displayFolder: 5 Tu sueldo
+		lineageTag: a6fe12ed-01a7-4aa5-8fcc-cf9302f46329
+
+	measure 'Alquiler medio municipio' = DIVIDE(SUMX(fact_alquiler_municipio, fact_alquiler_municipio[alquiler_medio] * fact_alquiler_municipio[viv_arrendadas]), SUM(fact_alquiler_municipio[viv_arrendadas]))
+		formatString: #,0 €
+		displayFolder: 6 Municipios
+		lineageTag: 9069ee47-ee78-4819-9c3c-1e9716764b4b
+
+	measure 'Alquiler nuevo municipio' = DIVIDE(SUMX(fact_alquiler_municipio, fact_alquiler_municipio[alquiler_nuevos] * fact_alquiler_municipio[viv_arrendadas]), SUM(fact_alquiler_municipio[viv_arrendadas]))
+		formatString: #,0 €
+		displayFolder: 6 Municipios
+		lineageTag: 2ee99e0b-142a-4a6b-851f-04da7dcb5a3c
+
+	measure 'Salario provincia del municipio' =
+			VAR c = SELECTEDVALUE(fact_alquiler_municipio[cod_prov])
+			RETURN IF(ISBLANK(c), [Salario 2024], CALCULATE([Salario 2024], dim_provincia[cod_prov] = c))
+		formatString: #,0 €
+		displayFolder: 6 Municipios
+		lineageTag: f79c194d-e4f4-4711-b776-6fb117f8a7c2
+
+	measure '% sueldo contrato nuevo municipio' = DIVIDE([Alquiler nuevo municipio] * 12, [Salario provincia del municipio])
+		formatString: 0.0%
+		displayFolder: 6 Municipios
+		lineageTag: 6ef0bd56-35fe-49fb-bbba-e596c076460c
+
+	measure 'Alquiler €/m²' =
+			VAR prov = DIVIDE(SUMX(fact_alquiler_provincia, fact_alquiler_provincia[alquiler_m2] * fact_alquiler_provincia[viv_arrendadas]), SUM(fact_alquiler_provincia[viv_arrendadas]))
+			VAR nac = SUM(fact_alquiler_espana[alquiler_m2])
+			RETURN IF(ISFILTERED(dim_provincia), prov, nac)
+		formatString: #,0.0 €
+		displayFolder: 1 Alquiler
+		lineageTag: 45797676-72a3-4262-940e-b956fe4ad28a
+
+	measure 'm² medios' =
+			VAR prov = DIVIDE(SUMX(fact_alquiler_provincia, fact_alquiler_provincia[m2_medios] * fact_alquiler_provincia[viv_arrendadas]), SUM(fact_alquiler_provincia[viv_arrendadas]))
+			VAR nac = SUM(fact_alquiler_espana[m2_medios])
+			RETURN IF(ISFILTERED(dim_provincia), prov, nac)
+		formatString: 0
+		displayFolder: 1 Alquiler
+		lineageTag: 113057ce-285e-422d-a3cc-c84cc52710b8
+
+	measure 'Color sobrecoste' = IF(SELECTEDVALUE(dim_provincia[es_alicante], FALSE()), "#0C3549", "#5B6B78")
+		displayFolder: 1 Alquiler
+		lineageTag: 14a1d302-c929-4efa-9310-81f5175873b2
+
+	measure 'Salario España' = CALCULATE([Salario 2024], REMOVEFILTERS(dim_provincia))
+		formatString: #,0 €
+		displayFolder: 2 Salario
+		lineageTag: 628b8ec8-02ad-4f70-8870-78a85f359915
+
+	measure 'Diferencia salario vs España' = DIVIDE([Salario 2024], [Salario España]) - 1
+		formatString: +0%;-0%;0%
+		displayFolder: 2 Salario
+		lineageTag: 01253962-9743-42cf-9648-9d2d13c2ccc0
+
+	measure 'Ranking esfuerzo' =
+			VAR v = [% sueldo contrato nuevo]
+			RETURN IF(ISFILTERED(dim_provincia), COUNTROWS(FILTER(ALLNOBLANKROW(dim_provincia[cod_prov]), [% sueldo contrato nuevo] > v)) + 1)
+		formatString: 0
+		displayFolder: 3 Esfuerzo
+		lineageTag: d663b165-1b9e-431d-8142-d3eadc0f47a1
+
+	measure 'Nivel de esfuerzo' =
+			VAR p = [% sueldo contrato nuevo]
+			RETURN IF(ISBLANK(p), BLANK(), IF(p <= 0.3, "Asumible (≤ 30 %)", IF(p <= 0.4, "Elevado (30-40 %)", "Muy elevado (> 40 %)")))
+		displayFolder: 3 Esfuerzo
+		lineageTag: 9d943cd4-3717-4414-b837-7059e46b0521
+
+	measure 'Texto ranking esfuerzo' = FORMAT([Ranking esfuerzo], "0") & ".º de " & FORMAT(COUNTROWS(ALLNOBLANKROW(dim_provincia)), "0")
+		displayFolder: 3 Esfuerzo
+		lineageTag: 22d92edd-319c-403a-88c1-97ecf184b891
+
+	measure 'Texto provincias por encima del 30 %' = FORMAT([Provincias por encima del 30 %], "0") & " de " & FORMAT(COUNTROWS(ALLNOBLANKROW(dim_provincia)), "0")
+		displayFolder: 3 Esfuerzo
+		lineageTag: 77369a18-56d7-4fb2-96fd-1af2f70997bb
+
+	measure 'Color esfuerzo municipio' =
+			VAR p = [% sueldo contrato nuevo municipio]
+			RETURN SWITCH(TRUE(), ISBLANK(p), "#5B6B78", p > 0.4, "#A23B2A", p > 0.3, "#B9770E", "#2E86AB")
+		displayFolder: 6 Municipios
+		lineageTag: 0606e888-526b-4c88-9514-f63f3ed05d1d
+
+	measure 'Texto salario mensual' = FORMAT([Salario mensual bruto], "#,0 €")
+		displayFolder: 2 Salario
+		lineageTag: ad757854-af4d-48ba-a51d-8fe3a08cafb8
+
+	measure 'Texto salario anual' = FORMAT([Salario 2024], "#,0 €")
+		displayFolder: 2 Salario
+		lineageTag: 24f0dcd1-a2de-4277-adc2-c06ea0dc4a8d
+
+	column x
+		dataType: int64
+		isHidden
+		lineageTag: 4e597622-3a9d-4a0e-ad6d-a2f0d81f0e07
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [x]
+
+		annotation SummarizationSetBy = User
+
+	partition _Medidas = calculated
+		mode: import
+		source = ROW("x", 0)
+
+	annotation PBI_Id = medidas
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "alquiler-vs-sueldo"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "32ba70db-56a6-4a10-b8a6-914aa89c599d"
+  }
+}

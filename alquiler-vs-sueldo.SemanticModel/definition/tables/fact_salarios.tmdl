@@ -1,0 +1,61 @@
+table fact_salarios
+	lineageTag: bc90a031-4df2-4182-917d-b48b37936b41
+
+	column cod_prov
+		dataType: string
+		isHidden
+		lineageTag: e9f677a0-baa3-4fe4-b428-d6f850d3dc39
+		summarizeBy: none
+		sourceColumn: cod_prov
+
+		annotation SummarizationSetBy = User
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: dfe64b55-c794-4054-9d8d-da46f162ba85
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = User
+
+	column tramo_edad
+		dataType: string
+		isHidden
+		lineageTag: a649cbc4-a611-4b64-9023-9305121bda0e
+		summarizeBy: none
+		sourceColumn: tramo_edad
+
+		annotation SummarizationSetBy = User
+
+	column asalariados
+		dataType: int64
+		formatString: #,0
+		lineageTag: 890d0a6c-80f4-40ac-aaa7-73d244606465
+		summarizeBy: none
+		sourceColumn: asalariados
+
+		annotation SummarizationSetBy = User
+
+	column salario_medio_anual
+		dataType: int64
+		formatString: #,0 €
+		lineageTag: 9ebd1031-64d6-4319-89b2-0f7d52fe1116
+		summarizeBy: none
+		sourceColumn: salario_medio_anual
+
+		annotation SummarizationSetBy = User
+
+	partition fact_salarios = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaDatos & "fact_salarios.csv"),[Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"cod_prov", type text}, {"anio", Int64.Type}, {"tramo_edad", type text}, {"asalariados", Int64.Type}, {"salario_medio_anual", Int64.Type}}, "en-US")
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table
+

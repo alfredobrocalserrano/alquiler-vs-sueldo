@@ -1,0 +1,49 @@
+cod_prov,provincia,ccaa,provincia_corta,ubicacion_mapa,es_alicante
+02,Albacete,Castilla-La Mancha,Albacete,"Albacete, España",False
+03,Alicante/Alacant,Comunitat Valenciana,Alicante,"Alicante, España",True
+04,Almería,Andalucía,Almería,"Almería, España",False
+05,Ávila,Castilla y León,Ávila,"Ávila, España",False
+06,Badajoz,Extremadura,Badajoz,"Badajoz, España",False
+07,"Balears, Illes",Illes Balears,Illes Balears,"Illes Balears, España",False
+08,Barcelona,Cataluña,Barcelona,"Barcelona, España",False
+09,Burgos,Castilla y León,Burgos,"Burgos, España",False
+10,Cáceres,Extremadura,Cáceres,"Cáceres, España",False
+11,Cádiz,Andalucía,Cádiz,"Cádiz, España",False
+12,Castellón/Castelló,Comunitat Valenciana,Castellón,"Castellón, España",False
+13,Ciudad Real,Castilla-La Mancha,Ciudad Real,"Ciudad Real, España",False
+14,Córdoba,Andalucía,Córdoba,"Córdoba, España",False
+15,"Coruña, A",Galicia,A Coruña,"A Coruña, España",False
+16,Cuenca,Castilla-La Mancha,Cuenca,"Cuenca, España",False
+17,Girona,Cataluña,Girona,"Girona, España",False
+18,Granada,Andalucía,Granada,"Granada, España",False
+19,Guadalajara,Castilla-La Mancha,Guadalajara,"Guadalajara, España",False
+21,Huelva,Andalucía,Huelva,"Huelva, España",False
+22,Huesca,Aragón,Huesca,"Huesca, España",False
+23,Jaén,Andalucía,Jaén,"Jaén, España",False
+24,León,Castilla y León,León,"León, España",False
+25,Lleida,Cataluña,Lleida,"Lleida, España",False
+26,"Rioja, La",La Rioja,La Rioja,"La Rioja, España",False
+27,Lugo,Galicia,Lugo,"Lugo, España",False
+28,Madrid,Comunidad de Madrid,Madrid,"Madrid, España",False
+29,Málaga,Andalucía,Málaga,"Málaga, España",False
+30,Murcia,Región de Murcia,Murcia,"Murcia, España",False
+32,Ourense,Galicia,Ourense,"Ourense, España",False
+33,Asturias,Principado de Asturias,Asturias,"Asturias, España",False
+34,Palencia,Castilla y León,Palencia,"Palencia, España",False
+35,"Palmas, Las",Canarias,Las Palmas,"Las Palmas, España",False
+36,Pontevedra,Galicia,Pontevedra,"Pontevedra, España",False
+37,Salamanca,Castilla y León,Salamanca,"Salamanca, España",False
+38,Santa Cruz de Tenerife,Canarias,Santa Cruz de Tenerife,"Santa Cruz de Tenerife, España",False
+39,Cantabria,Cantabria,Cantabria,"Cantabria, España",False
+40,Segovia,Castilla y León,Segovia,"Segovia, España",False
+41,Sevilla,Andalucía,Sevilla,"Sevilla, España",False
+42,Soria,Castilla y León,Soria,"Soria, España",False
+43,Tarragona,Cataluña,Tarragona,"Tarragona, España",False
+44,Teruel,Aragón,Teruel,"Teruel, España",False
+45,Toledo,Castilla-La Mancha,Toledo,"Toledo, España",False
+46,Valencia/València,Comunitat Valenciana,Valencia,"Valencia, España",False
+47,Valladolid,Castilla y León,Valladolid,"Valladolid, España",False
+49,Zamora,Castilla y León,Zamora,"Zamora, España",False
+50,Zaragoza,Aragón,Zaragoza,"Zaragoza, España",False
+51,Ceuta,Ceuta,Ceuta,"Ceuta, España",False
+52,Melilla,Melilla,Melilla,"Melilla, España",False

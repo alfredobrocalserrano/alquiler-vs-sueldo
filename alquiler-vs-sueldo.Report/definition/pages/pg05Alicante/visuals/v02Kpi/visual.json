@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v02Kpi",
+  "position": {
+    "x": 333,
+    "y": 86,
+    "z": 1002,
+    "height": 104,
+    "width": 301,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Texto ranking esfuerzo"
+                }
+              },
+              "queryRef": "_Medidas.Texto ranking esfuerzo",
+              "nativeQueryRef": "Texto ranking esfuerzo",
+              "displayName": "Puesto en esfuerzo"
+            }
+          ]
+        },
+        "ReferenceLabels": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Diferencia vs España (pp)"
+                }
+              },
+              "queryRef": "_Medidas.Diferencia vs España (pp)",
+              "nativeQueryRef": "Diferencia vs España (pp)",
+              "displayName": "Frente a España"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "referenceLabel": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Puesto de Alicante entre las 48 provincias por peso del alquiler en el sueldo'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

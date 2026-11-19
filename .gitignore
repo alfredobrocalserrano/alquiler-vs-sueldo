@@ -1,0 +1,12 @@
+# Caché y ajustes locales de Power BI Desktop
+**/.pbi/cache.abf
+**/.pbi/localSettings.json
+# Versión antigua en formato binario y copias de seguridad
+*.pbix
+_respaldo/
+# Descargas originales (los datos usados están en raw/ y datos_limpios/)
+*.xlsx
+*.pdf
+~$*
+# Python
+__pycache__/

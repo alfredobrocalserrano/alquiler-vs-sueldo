@@ -1,0 +1,5 @@
+expression RutaDatos = "C:\Users\alfre\Desktop\alquiler-vs-sueldo\datos_limpios\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: d08afaad-0c4e-4657-a337-5abba1933922
+
+	annotation PBI_ResultType = Text
+
